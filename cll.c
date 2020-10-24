@@ -17,7 +17,7 @@ void position_insert(List* cll, int data, int pos){
     //for start
     if(pos == 0){ //checking if the position given is the start of the list
     
-        if(cll->head==NULL){ //checking if list is null
+        if(cll->head==NULL){ //checking if list is empty
 
             cll->head = newnode; //head points to newnode
             newnode->next = newnode; //circular list, hence first node points to itself
@@ -155,7 +155,7 @@ int josephus(List* cll, int k){
         kill=survive->next; //assigning kill to the kth's next node 
         survive->next= kill->next; //survives next should point to the node after k
 
-        //deletion od the kth node
+        //deletion of the kth node
         free(kill);
 
 
