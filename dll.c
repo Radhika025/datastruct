@@ -139,7 +139,7 @@ int search_list(List* dll,int key){
     //aux node is made to check each node and compare with the key
     struct Node* aux=dll->head; //aux points to start of the node
     
-    //for loop to loop throught the entire list 
+    //for loop iterates through the entire list 
     for(int i=0; i<dll->number_of_nodes; i++){
         if(aux->data==key){ //comparing the key to each nodes data
             return i; //return the index if found
